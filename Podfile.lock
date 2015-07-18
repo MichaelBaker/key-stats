@@ -1,0 +1,28 @@
+PODS:
+  - SQLCipher (3.1.0):
+    - SQLCipher/standard (= 3.1.0)
+  - SQLCipher/common (3.1.0)
+  - SQLCipher/standard (3.1.0):
+    - SQLCipher/common
+  - SQLite.swift/Cipher (0.1.0.pre):
+    - SQLCipher
+    - SQLite.swift/Core
+  - SQLite.swift/Core (0.1.0.pre)
+
+DEPENDENCIES:
+  - SQLite.swift/Cipher (from `git@github.com:stephencelis/SQLite.swift.git`)
+
+EXTERNAL SOURCES:
+  SQLite.swift:
+    :git: git@github.com:stephencelis/SQLite.swift.git
+
+CHECKOUT OPTIONS:
+  SQLite.swift:
+    :commit: 89d16192bb73bf179c08c30227fbd9e52be6bf32
+    :git: git@github.com:stephencelis/SQLite.swift.git
+
+SPEC CHECKSUMS:
+  SQLCipher: c44fcca49c31483c2489cfb79aa7a69407f3794a
+  SQLite.swift: 6e05cc2b8efb0e91911e9cfb93551dd682b25843
+
+COCOAPODS: 0.37.2
