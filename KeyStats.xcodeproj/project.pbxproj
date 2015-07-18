@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE299E611B5AC3460035EFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE299E601B5AC3460035EFBA /* AppDelegate.swift */; };
+		EE299E631B5AC3460035EFBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE299E621B5AC3460035EFBA /* Images.xcassets */; };
+		EE299E661B5AC3460035EFBA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE299E641B5AC3460035EFBA /* MainMenu.xib */; };
+		EE299E721B5AC3470035EFBA /* KeyStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE299E711B5AC3470035EFBA /* KeyStatsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE299E6C1B5AC3470035EFBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE299E531B5AC3460035EFBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE299E5A1B5AC3460035EFBA;
+			remoteInfo = KeyStats;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE299E5B1B5AC3460035EFBA /* KeyStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE299E5F1B5AC3460035EFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE299E601B5AC3460035EFBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE299E621B5AC3460035EFBA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EE299E651B5AC3460035EFBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		EE299E6B1B5AC3470035EFBA /* KeyStatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyStatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE299E701B5AC3470035EFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE299E711B5AC3470035EFBA /* KeyStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE299E581B5AC3460035EFBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE299E681B5AC3470035EFBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE299E521B5AC3460035EFBA = {
+			isa = PBXGroup;
+			children = (
+				EE299E5D1B5AC3460035EFBA /* KeyStats */,
+				EE299E6E1B5AC3470035EFBA /* KeyStatsTests */,
+				EE299E5C1B5AC3460035EFBA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE299E5C1B5AC3460035EFBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE299E5B1B5AC3460035EFBA /* KeyStats.app */,
+				EE299E6B1B5AC3470035EFBA /* KeyStatsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE299E5D1B5AC3460035EFBA /* KeyStats */ = {
+			isa = PBXGroup;
+			children = (
+				EE299E601B5AC3460035EFBA /* AppDelegate.swift */,
+				EE299E621B5AC3460035EFBA /* Images.xcassets */,
+				EE299E641B5AC3460035EFBA /* MainMenu.xib */,
+				EE299E5E1B5AC3460035EFBA /* Supporting Files */,
+			);
+			path = KeyStats;
+			sourceTree = "<group>";
+		};
+		EE299E5E1B5AC3460035EFBA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE299E5F1B5AC3460035EFBA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE299E6E1B5AC3470035EFBA /* KeyStatsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE299E711B5AC3470035EFBA /* KeyStatsTests.swift */,
+				EE299E6F1B5AC3470035EFBA /* Supporting Files */,
+			);
+			path = KeyStatsTests;
+			sourceTree = "<group>";
+		};
+		EE299E6F1B5AC3470035EFBA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE299E701B5AC3470035EFBA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE299E5A1B5AC3460035EFBA /* KeyStats */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE299E751B5AC3470035EFBA /* Build configuration list for PBXNativeTarget "KeyStats" */;
+			buildPhases = (
+				EE299E571B5AC3460035EFBA /* Sources */,
+				EE299E581B5AC3460035EFBA /* Frameworks */,
+				EE299E591B5AC3460035EFBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeyStats;
+			productName = KeyStats;
+			productReference = EE299E5B1B5AC3460035EFBA /* KeyStats.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE299E6A1B5AC3470035EFBA /* KeyStatsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE299E781B5AC3470035EFBA /* Build configuration list for PBXNativeTarget "KeyStatsTests" */;
+			buildPhases = (
+				EE299E671B5AC3470035EFBA /* Sources */,
+				EE299E681B5AC3470035EFBA /* Frameworks */,
+				EE299E691B5AC3470035EFBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE299E6D1B5AC3470035EFBA /* PBXTargetDependency */,
+			);
+			name = KeyStatsTests;
+			productName = KeyStatsTests;
+			productReference = EE299E6B1B5AC3470035EFBA /* KeyStatsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE299E531B5AC3460035EFBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Michael Baker";
+				TargetAttributes = {
+					EE299E5A1B5AC3460035EFBA = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					EE299E6A1B5AC3470035EFBA = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = EE299E5A1B5AC3460035EFBA;
+					};
+				};
+			};
+			buildConfigurationList = EE299E561B5AC3460035EFBA /* Build configuration list for PBXProject "KeyStats" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE299E521B5AC3460035EFBA;
+			productRefGroup = EE299E5C1B5AC3460035EFBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE299E5A1B5AC3460035EFBA /* KeyStats */,
+				EE299E6A1B5AC3470035EFBA /* KeyStatsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE299E591B5AC3460035EFBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE299E631B5AC3460035EFBA /* Images.xcassets in Resources */,
+				EE299E661B5AC3460035EFBA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE299E691B5AC3470035EFBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE299E571B5AC3460035EFBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE299E611B5AC3460035EFBA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE299E671B5AC3470035EFBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE299E721B5AC3470035EFBA /* KeyStatsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE299E6D1B5AC3470035EFBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE299E5A1B5AC3460035EFBA /* KeyStats */;
+			targetProxy = EE299E6C1B5AC3470035EFBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE299E641B5AC3460035EFBA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE299E651B5AC3460035EFBA /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE299E731B5AC3470035EFBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE299E741B5AC3470035EFBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EE299E761B5AC3470035EFBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = KeyStats/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE299E771B5AC3470035EFBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = KeyStats/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EE299E791B5AC3470035EFBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KeyStatsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeyStats.app/Contents/MacOS/KeyStats";
+			};
+			name = Debug;
+		};
+		EE299E7A1B5AC3470035EFBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KeyStatsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeyStats.app/Contents/MacOS/KeyStats";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE299E561B5AC3460035EFBA /* Build configuration list for PBXProject "KeyStats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE299E731B5AC3470035EFBA /* Debug */,
+				EE299E741B5AC3470035EFBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE299E751B5AC3470035EFBA /* Build configuration list for PBXNativeTarget "KeyStats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE299E761B5AC3470035EFBA /* Debug */,
+				EE299E771B5AC3470035EFBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE299E781B5AC3470035EFBA /* Build configuration list for PBXNativeTarget "KeyStatsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE299E791B5AC3470035EFBA /* Debug */,
+				EE299E7A1B5AC3470035EFBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE299E531B5AC3460035EFBA /* Project object */;
+}
