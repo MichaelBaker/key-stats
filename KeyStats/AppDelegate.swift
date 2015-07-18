@@ -20,6 +20,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        let menu = NSMenu()
+        
+        menu.addItem(NSMenuItem(title: "PrintQuote", action: Selector("printQuote:"), keyEquivalent: "P"))
+        menu.addItem(NSMenuItem.separatorItem())
+        menu.addItem(NSMenuItem(title: "Quit KeyStats", action: Selector("terminate:"), keyEquivalent: "q"))
+        statusItem.menu = menu
+        
         if let button = statusItem.button {
             button.image  = NSImage(named: "KeyStatusIcon")
             button.action = Selector("printQuote:")
