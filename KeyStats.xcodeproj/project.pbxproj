@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EE299E611B5AC3460035EFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE299E601B5AC3460035EFBA /* AppDelegate.swift */; };
-		EE299E631B5AC3460035EFBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE299E621B5AC3460035EFBA /* Images.xcassets */; };
 		EE299E661B5AC3460035EFBA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE299E641B5AC3460035EFBA /* MainMenu.xib */; };
 		EE299E721B5AC3470035EFBA /* KeyStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE299E711B5AC3470035EFBA /* KeyStatsTests.swift */; };
+		EE299E7E1B5ACC520035EFBA /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE299E7D1B5ACC520035EFBA /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,11 +27,11 @@
 		EE299E5B1B5AC3460035EFBA /* KeyStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE299E5F1B5AC3460035EFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE299E601B5AC3460035EFBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE299E621B5AC3460035EFBA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EE299E651B5AC3460035EFBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		EE299E6B1B5AC3470035EFBA /* KeyStatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyStatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE299E701B5AC3470035EFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE299E711B5AC3470035EFBA /* KeyStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsTests.swift; sourceTree = "<group>"; };
+		EE299E7D1B5ACC520035EFBA /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = KeyStats.xcodeproj/../Media.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				EE299E601B5AC3460035EFBA /* AppDelegate.swift */,
-				EE299E621B5AC3460035EFBA /* Images.xcassets */,
+				EE299E7D1B5ACC520035EFBA /* Media.xcassets */,
 				EE299E641B5AC3460035EFBA /* MainMenu.xib */,
 				EE299E5E1B5AC3460035EFBA /* Supporting Files */,
 			);
@@ -186,7 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE299E631B5AC3460035EFBA /* Images.xcassets in Resources */,
+				EE299E7E1B5ACC520035EFBA /* Media.xcassets in Resources */,
 				EE299E661B5AC3460035EFBA /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
