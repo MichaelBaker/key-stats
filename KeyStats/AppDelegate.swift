@@ -22,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // but Swift doesn't recognize the constant name for whatever reason so I,
     // had to use the number literal instead.
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
+    let db         = connectToDb()
 
      func applicationDidFinishLaunching(aNotification: NSNotification) {
         let menu = NSMenu()
@@ -35,7 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.handleKeyPress(event)
         })
         
-        migrateDatabase()
+        migrateDatabase(self.db)
         
         menu.addItem(NSMenuItem(title: "PrintQuote", action: Selector("printQuote:"), keyEquivalent: "P"))
         menu.addItem(NSMenuItem.separatorItem())

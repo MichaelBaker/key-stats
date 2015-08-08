@@ -33,9 +33,7 @@ struct KeyStrokeColumns {
     let control_pressed: Expression<Bool>
 }
 
-func migrateDatabase() {
-    let db           = connectToDb()
-    
+func migrateDatabase(db: KeyStatsDb) {
     db.db.create(table: db.migrations, ifNotExists: true) { t in
         t.column(db.migration_cols.migration_id, primaryKey: true)
     }
