@@ -25,21 +25,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let db         = connectToDb()
 
      func applicationDidFinishLaunching(aNotification: NSNotification) {
+        if !acquirePrivileges() { exit(0) }
+        setUpWidget()
+        migrateDatabase(self.db)
+        NSEvent.addGlobalMonitorForEventsMatchingMask(NSEventMask.KeyDownMask, handler: { (event) -> Void in self.handleKeyPress(event) })
+    }
+    
+    func setUpWidget() -> Void {
         let menu = NSMenu()
         
-        // TODO: Create a better error message if privileges are not granted
-        if !acquirePrivileges() {
-            exit(0)
-        }
-        
-        NSEvent.addGlobalMonitorForEventsMatchingMask(NSEventMask.KeyDownMask, handler: { (event) -> Void in
-            self.handleKeyPress(event)
-        })
-        
-        migrateDatabase(self.db)
-        
-        menu.addItem(NSMenuItem(title: "PrintQuote", action: Selector("printQuote:"), keyEquivalent: "P"))
-        menu.addItem(NSMenuItem.separatorItem())
         menu.addItem(NSMenuItem(title: "Quit KeyStats", action: Selector("terminate:"), keyEquivalent: "q"))
         statusItem.menu = menu
         
@@ -55,31 +49,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let shiftPressed   = event.modifierFlags.rawValue & NSEventModifierFlags.ShiftKeyMask.rawValue != 0
             let controlPressed = event.modifierFlags.rawValue & NSEventModifierFlags.ControlKeyMask.rawValue != 0
             let altPressed     = event.modifierFlags.rawValue & NSEventModifierFlags.AlternateKeyMask.rawValue != 0
-            let keyStroke      = KeyStroke(
+            logKeyStroke(self.db, KeyStroke(
                 keyChar:        character,
                 commandPressed: commandPressed,
                 shiftPressed:   shiftPressed,
                 controlPressed: controlPressed,
-                altPressed:     altPressed
-            )
+                altPressed:     altPressed,
+                isBackspace:    isBackspace(character)
+            ))
         }
+    }
+    
+    func isBackspace(c: String) -> Bool {
+        let scalars = c.unicodeScalars
+        let char    = scalars[scalars.startIndex].value
+        return Int(char) == 127
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
     
-    func printQuote(sender: AnyObject) {
-        println("This is not an NSString")
-    }
-    
     func acquirePrivileges() -> Bool {
         let accessEnabled = AXIsProcessTrustedWithOptions(
             [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true])
         
-        if accessEnabled != 1 {
-            println("You need to enable the keylogger in the System Prefrences")
-        }
         return accessEnabled == 1
     }
 }

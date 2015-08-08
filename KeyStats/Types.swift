@@ -14,4 +14,5 @@ struct KeyStroke {
     var shiftPressed:   Bool
     var controlPressed: Bool
     var altPressed:     Bool
+    var isBackspace:    Bool
 }

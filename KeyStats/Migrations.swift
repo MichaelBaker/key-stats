@@ -18,5 +18,7 @@ func addKeyStrokesTable(db: KeyStatsDb) {
         t.column(db.key_stroke_cols.shift_pressed)
         t.column(db.key_stroke_cols.alt_pressed)
         t.column(db.key_stroke_cols.control_pressed)
+        t.column(db.key_stroke_cols.is_backspace)
+        t.column(db.key_stroke_cols.timestamp)
     }
 }

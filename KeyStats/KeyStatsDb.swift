@@ -31,6 +31,8 @@ struct KeyStrokeColumns {
     let shift_pressed:   Expression<Bool>
     let alt_pressed:     Expression<Bool>
     let control_pressed: Expression<Bool>
+    let is_backspace:    Expression<Bool>
+    let timestamp:       Expression<Double> // Seconds since January 1, 1970 with fractions of a second
 }
 
 func migrateDatabase(db: KeyStatsDb) {
@@ -43,7 +45,7 @@ func migrateDatabase(db: KeyStatsDb) {
 
 func runMigration(migration: (KeyStatsDb) -> Void, db: KeyStatsDb, timestamp: Int) -> Void {
     migration(db)
-    
+    db.migrations.insert(db.migration_cols.migration_id <- timestamp)
 }
 
 func connectToDb() -> KeyStatsDb {
@@ -59,7 +61,21 @@ func connectToDb() -> KeyStatsDb {
             command_pressed: Expression<Bool>("command_pressed"),
             shift_pressed:   Expression<Bool>("shift_pressed"),
             alt_pressed:     Expression<Bool>("alt_pressed"),
-            control_pressed: Expression<Bool>("control_pressed")
+            control_pressed: Expression<Bool>("control_pressed"),
+            is_backspace:    Expression<Bool>("is_backspace"),
+            timestamp:       Expression<Double>("timestamp")
         )
+    )
+}
+
+func logKeyStroke(db: KeyStatsDb, ks: KeyStroke) {
+    db.key_strokes.insert(
+        db.key_stroke_cols.key_char        <- ks.keyChar,
+        db.key_stroke_cols.command_pressed <- ks.commandPressed,
+        db.key_stroke_cols.shift_pressed   <- ks.shiftPressed,
+        db.key_stroke_cols.alt_pressed     <- ks.altPressed,
+        db.key_stroke_cols.control_pressed <- ks.controlPressed,
+        db.key_stroke_cols.is_backspace    <- ks.isBackspace,
+        db.key_stroke_cols.timestamp       <- NSDate().timeIntervalSince1970
     )
 }
