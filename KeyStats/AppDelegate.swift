@@ -8,6 +8,10 @@
 
 import Cocoa
 import SQLite
+import Foundation
+import AppKit
+
+// TODO: Make this efficient by performing work in the background/batches
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -19,9 +23,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // had to use the number literal instead.
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
 
-
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+     func applicationDidFinishLaunching(aNotification: NSNotification) {
         let menu = NSMenu()
+        
+        // TODO: Create a better error message if privileges are not granted
+        if !acquirePrivileges() {
+            exit(0)
+        }
+        
+        NSEvent.addGlobalMonitorForEventsMatchingMask(NSEventMask.KeyDownMask, handler: { (event) -> Void in
+            self.handleKeyPress(event)
+        })
+        
+        migrateDatabase()
         
         menu.addItem(NSMenuItem(title: "PrintQuote", action: Selector("printQuote:"), keyEquivalent: "P"))
         menu.addItem(NSMenuItem.separatorItem())
@@ -33,6 +47,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.action = Selector("printQuote:")
         }
     }
+    
+    func handleKeyPress(event: NSEvent) -> Void {
+        if let character = event.charactersIgnoringModifiers {
+            let commandPressed = event.modifierFlags.rawValue & NSEventModifierFlags.CommandKeyMask.rawValue != 0
+            let shiftPressed   = event.modifierFlags.rawValue & NSEventModifierFlags.ShiftKeyMask.rawValue != 0
+            let controlPressed = event.modifierFlags.rawValue & NSEventModifierFlags.ControlKeyMask.rawValue != 0
+            let altPressed     = event.modifierFlags.rawValue & NSEventModifierFlags.AlternateKeyMask.rawValue != 0
+            let keyStroke      = KeyStroke(
+                keyChar:        character,
+                commandPressed: commandPressed,
+                shiftPressed:   shiftPressed,
+                controlPressed: controlPressed,
+                altPressed:     altPressed
+            )
+        }
+    }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
@@ -41,7 +71,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func printQuote(sender: AnyObject) {
         println("This is not an NSString")
     }
-
-
+    
+    func acquirePrivileges() -> Bool {
+        let accessEnabled = AXIsProcessTrustedWithOptions(
+            [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true])
+        
+        if accessEnabled != 1 {
+            println("You need to enable the keylogger in the System Prefrences")
+        }
+        return accessEnabled == 1
+    }
 }
 

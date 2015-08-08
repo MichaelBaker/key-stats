@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		EE00F8371B5AD7B600E60876 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE00F8361B5AD7B600E60876 /* SQLite.framework */; };
+		EE00F8391B7675E900E60876 /* KeyStatsDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00F8381B7675E900E60876 /* KeyStatsDb.swift */; };
+		EE00F83A1B7675E900E60876 /* KeyStatsDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00F8381B7675E900E60876 /* KeyStatsDb.swift */; };
+		EE00F83C1B76763300E60876 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00F83B1B76763300E60876 /* Types.swift */; };
+		EE00F83D1B76763300E60876 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00F83B1B76763300E60876 /* Types.swift */; };
+		EE00F83F1B7676AD00E60876 /* Migrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00F83E1B7676AD00E60876 /* Migrations.swift */; };
+		EE00F8401B7676AD00E60876 /* Migrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00F83E1B7676AD00E60876 /* Migrations.swift */; };
 		EE299E611B5AC3460035EFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE299E601B5AC3460035EFBA /* AppDelegate.swift */; };
 		EE299E661B5AC3460035EFBA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE299E641B5AC3460035EFBA /* MainMenu.xib */; };
 		EE299E721B5AC3470035EFBA /* KeyStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE299E711B5AC3470035EFBA /* KeyStatsTests.swift */; };
@@ -28,6 +34,9 @@
 		D06B43AE27DCD13D66868BD0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EE00F8321B5AD56D00E60876 /* SQLCipher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLCipher.framework; path = Pods/../build/Debug/Pods/SQLCipher.framework; sourceTree = "<group>"; };
 		EE00F8361B5AD7B600E60876 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Pods/../build/Debug/Pods/SQLite.framework; sourceTree = "<group>"; };
+		EE00F8381B7675E900E60876 /* KeyStatsDb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyStatsDb.swift; sourceTree = "<group>"; };
+		EE00F83B1B76763300E60876 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		EE00F83E1B7676AD00E60876 /* Migrations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Migrations.swift; sourceTree = "<group>"; };
 		EE299E5B1B5AC3460035EFBA /* KeyStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE299E5F1B5AC3460035EFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE299E601B5AC3460035EFBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +112,9 @@
 				EE299E7D1B5ACC520035EFBA /* Media.xcassets */,
 				EE299E641B5AC3460035EFBA /* MainMenu.xib */,
 				EE299E5E1B5AC3460035EFBA /* Supporting Files */,
+				EE00F8381B7675E900E60876 /* KeyStatsDb.swift */,
+				EE00F83B1B76763300E60876 /* Types.swift */,
+				EE00F83E1B7676AD00E60876 /* Migrations.swift */,
 			);
 			path = KeyStats;
 			sourceTree = "<group>";
@@ -282,7 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE00F83F1B7676AD00E60876 /* Migrations.swift in Sources */,
+				EE00F83C1B76763300E60876 /* Types.swift in Sources */,
 				EE299E611B5AC3460035EFBA /* AppDelegate.swift in Sources */,
+				EE00F8391B7675E900E60876 /* KeyStatsDb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE00F8401B7676AD00E60876 /* Migrations.swift in Sources */,
+				EE00F83D1B76763300E60876 /* Types.swift in Sources */,
 				EE299E721B5AC3470035EFBA /* KeyStatsTests.swift in Sources */,
+				EE00F83A1B7675E900E60876 /* KeyStatsDb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
